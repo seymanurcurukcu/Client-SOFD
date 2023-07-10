@@ -9,8 +9,8 @@ import  Button from 'react-bootstrap/Button';
 
 const Header = () => {
   return (
-    <div className='m-xl'>
-      <Navbar bg="whte" data-bs-theme="light" className='h-48 '>
+    <div className=''>
+      <Navbar bg="white" data-bs-theme="light" className='h-48 '>
         <Container className='horizontal-border' >
           <Navbar className="me-auto">
             <Navbar.Text className='p-10'>Lisanslı ve Geniş Yetkili Aracı Kurum</Navbar.Text>
@@ -19,7 +19,7 @@ const Header = () => {
 
           </Navbar>
           <Nav className="ms-auto">
-            <Nav.Link href="#">7/24 BİZE ULAŞIN</Nav.Link>
+            <Nav.Link href="#" >7/24 BİZE ULAŞIN</Nav.Link>
             <div className="vr" />
 
             <Nav.Link href="#"> 0 554 429 67 79</Nav.Link>
@@ -50,7 +50,7 @@ const Header = () => {
             </Navbar.Brand>
           </div>
 
-       {/*    <div className='d-flex gap-3' >
+          <div className='d-flex gap-3' >
             <div className='mr-2'>
               <Button variant="outline-dark" href="/" >
               <i className="bi bi-house-door-fill me-2"></i>
@@ -74,25 +74,39 @@ const Header = () => {
 
 
 
-          </div> */}
+          </div>
 
 
 
         </Container>
       </Navbar>
       <Container>
-      <Nav className="justify-content-start " activeKey="/home">
+      <Nav className="justify-content-center py-2" activeKey="/home">
         
-        <Nav.Item>
-          <Nav.Link href="/">
-          <i className="bi bi-house-door-fill me-1" style={{color:'black'}} size={48}></i><span className='text-type'>ANASAYFA</span></Nav.Link>
+          <Nav.Item>
+          <Nav.Link href="/home"><span className='text-type'>FOREX</span></Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href='/about'><span className='text-type'>HAKKINDA</span></Nav.Link>
+          <Nav.Link eventKey="link-1"><span className='text-type'>OPSİYON</span></Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href='/contact'><span className='text-type'>İLETİŞİM</span></Nav.Link>
-        </Nav.Item>  
+          <Nav.Link eventKey="link-2"><span className='text-type'>VİOP</span></Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link eventKey="link-2"><span className='text-type'>BORSA</span></Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link eventKey="link-2"><span className='text-type'>KRİPTO</span></Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link eventKey="link-2"><span className='text-type'>ANALİZ</span></Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link eventKey="link-2"><span className='text-type'>KURUMSAL</span></Nav.Link>
+        </Nav.Item>
+        
+        
+        
       </Nav>
      
     </Container>
