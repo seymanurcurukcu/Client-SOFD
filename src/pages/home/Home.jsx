@@ -11,13 +11,13 @@ const Home = () => {
       <div className='mb-4'>
         <Content1 />
       </div>
-      <div className='py-4'>
+      <div className='mb-4'>
         <Content2 />
       </div>
       <div>
         <ChartsButtons/>
       </div>
-      <div className='py-4'>
+      <div className='mb-4'>
         <Content3 />
       </div>
       
