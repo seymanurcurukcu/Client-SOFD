@@ -1,8 +1,8 @@
 import React from 'react'
 import { Carousel, Container } from 'react-bootstrap';
-import pic1 from '../../../public/FinansalPlanlamaOdakli_5983fe.jpg'
-import pic2 from '../../../public/fonlara_esit_yaklasim_a1924b.jpg'
-import pic3 from '../../../public/fonlarla_portfoy_yonetimi_fd64f7.jpg'
+import pic1 from '../../../public/man-hands-using-computers-analyze-data-investment-charts-financial-trading-plans-digital-banking-technology-marketing.jpg'
+import pic2 from '../../../public/site 1.png'
+import pic3 from '../../../public/site 2.png'
 import './content1.css'
 
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import './content3.css';
 import { Container, Row,Col, Image } from 'react-bootstrap';
-import gif from '../../../public/ocakcı holding orijinal.gif'
+import gif from '../../../public/logo2.gif'
 
 const Content3 = () => {
   return (
