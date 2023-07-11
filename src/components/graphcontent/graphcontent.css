@@ -15,12 +15,12 @@
     font-size: 1.2em;
     font-weight: 600;
 }
-.row-mmMarkets-button:hover{
+/* .row-mmMarkets-button:hover{
    color: blue;
 }
 .row-mmMarkets-button:active{
     color: blue;
- }
+ } */
 .container_charts{
 
     margin: 20px;

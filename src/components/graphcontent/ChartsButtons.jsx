@@ -12,7 +12,7 @@ const ChartsButtons = () => {
      <>
  
        <div className="button-container">
-            <button className="row-mmMarkets-button active" value={0} onClick={(e) => handleClick(e)}>FOREX</button>
+            <button className="row-mmMarkets-button btn active" value={0} onClick={(e) => handleClick(e)}>FOREX</button>
             <button className="row-mmMarkets-button" value={1} onClick={(e) => handleClick(e)}>VIOP</button>
             <button className="row-mmMarkets-button" value={2} onClick={(e) => handleClick(e)}>BORSA</button>
             <button className="row-mmMarkets-button" value={3} onClick={(e) => handleClick(e)}>KRİPTO</button>
