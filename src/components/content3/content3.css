@@ -1,3 +1,11 @@
 .bg-gray{
     background-color: #ebebeb;
 }
+
+p{
+    text-align: justify;
+}
+
+h3{
+    align-self: start;
+}

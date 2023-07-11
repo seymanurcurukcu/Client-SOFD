@@ -6,7 +6,7 @@ import './footer.css'
 const Footer = () => {
   return (
     
-    <footer className='text-center text-lg-start text-muted'>
+    <footer className='text-center text-lg-start text-muted bg-dark text-white'>
    
 
       <section className=''>

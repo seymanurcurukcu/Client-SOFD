@@ -62,6 +62,9 @@ padding: 10px;
   color: #000;
 }
 
+.text-type:hover{
+  border-bottom:4px solid #F7E6C4 ;
+}
 .m-xl{
   margin-bottom: 5rem;
 }
