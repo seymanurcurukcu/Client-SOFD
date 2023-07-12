@@ -6,70 +6,7 @@ import { Container, Row,Col } from 'react-bootstrap';
 import Chart from "react-apexcharts";
 const Graphcontent = ({type}) => {
 
-  const WS_ADDRESS = 'wss://socket.paratic.com/v2/?EIO=4&transport=websocket';
-  const WS_USD_TRY_MESSAGE = '42["joinStream", {"codes": ["USD/TRL"]}]';
-  const WS_EUR_TRY_MESSAGE = '42["joinStream", {"codes": ["EUR/TRL"]}]';
-  const [spotPariteler, setSpotPariteler] = useState([]);
-
-  useEffect(() => {
-    const ws = new WebSocket(WS_ADDRESS);
-
-    ws.onopen = () => {
-      ws.send('40');
-      ws.send(WS_USD_TRY_MESSAGE);
-      ws.send(WS_EUR_TRY_MESSAGE);
-    };
-
-    ws.onmessage = (event) => {
-      const data = JSON.parse(event.data.substring(event.data.indexOf('[')));
-
-      if (data[0] === 'spot_pariteler') {
-        const spotData = JSON.parse(data[1].replace(/\\/g, ''));
-        const [name, priceData] = Object.entries(spotData)[0];
-        const [sellPrice, buyPrice] = priceData.split('|').slice(0, 2);
-
-        if (sellPrice !== '' && buyPrice !== '') {
-          setSpotPariteler(prevSpotPariteler => {
-            const existingItem = prevSpotPariteler.find(item => item.name === name);
-
-            if (existingItem) {
-              return prevSpotPariteler.map(item => {
-                if (item.name === name) {
-                  return { ...item, sellPrice, buyPrice, show: true };
-                }
-                return item;
-              });
-            } else {
-              return [...prevSpotPariteler, { name, sellPrice, buyPrice, show: true }];
-            }
-          });
-        }
-      }
-
-      ws.send('3');
-    };
-
-    return () => {
-      ws.close();
-    };
-  }, []);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setSpotPariteler(prevSpotPariteler => {
-        const updatedPariteler = prevSpotPariteler.map(item => {
-          return { ...item, show: false };
-        });
-
-        return updatedPariteler;
-      });
-    }, 5000);
-
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, [spotPariteler]);
-  console.log(spotPariteler,"data")
+ 
     const chartoptions = {
         series: [{
             name: 'Dolar',
