@@ -14,7 +14,7 @@ const Header = () => {
       <Navbar className='justify-content-center' data-bs-theme="light">
         <Container className='justify-content-space-between p-3 horizontal-border'>
           <div>
-            <Navbar.Brand href="#home" className='d-flex align-items-center'>
+            <Navbar.Brand href="/" className='d-flex align-items-center'>
               <img
                 alt=""
                 src={SofdLogo}
@@ -30,11 +30,11 @@ const Header = () => {
 
           <div className='d-flex gap-3' >
             
-            <Nav className="ms-auto">
+            <Nav className="ms-auto" >
             <Nav.Link href="#">7/24 BİZE ULAŞIN</Nav.Link>
             <div className="vr" />
 
-            <Nav.Link href="#"> 0 554 429 67 79</Nav.Link>
+            <Nav.Link href="#"> +90 534 787 02 65</Nav.Link>
             <div className="vr" />
 
             <Nav.Link href="#">CANLI DESTEK</Nav.Link>
@@ -49,28 +49,19 @@ const Header = () => {
             <i className="bi bi-house-door-fill"></i></span></Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="/home"><span className='text-type'>FOREX</span></Nav.Link>
+            <Nav.Link href="/forex"><span className='text-type'>FOREX</span></Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="link-1"><span className='text-type'>OPSİYON</span></Nav.Link>
+            <Nav.Link href="/viop"><span className='text-type'>VİOP</span></Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="link-2"><span className='text-type'>VİOP</span></Nav.Link>
+            <Nav.Link href="/borsa"><span className='text-type'>BORSA</span></Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="link-2"><span className='text-type'>BORSA</span></Nav.Link>
+            <Nav.Link href="/kurumsal"><span className='text-type'>KURUMSAL</span></Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="link-2"><span className='text-type'>KRİPTO</span></Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link eventKey="link-2"><span className='text-type'>ANALİZ</span></Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link eventKey="link-2"><span className='text-type'>KURUMSAL</span></Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link eventKey="link-2"><span className='text-type'>İLETİŞİM</span></Nav.Link>
+            <Nav.Link href="/iletişim"><span className='text-type'>İLETİŞİM</span></Nav.Link>
           </Nav.Item>
         </Nav>
 

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './graphcontent.css'
 import Graphcontent from './Graphcontent';
+import { Nav } from 'react-bootstrap';
 
-const ChartsButtons = () => {
+
+const ChartsButtons = (props) => {
      const [type,setType]=useState(0);
      const handleClick=(e)=>{
        setType(e.target.value);
@@ -18,6 +20,8 @@ const ChartsButtons = () => {
             <button className="row-mmMarkets-button" value={3} onClick={(e) => handleClick(e)}>KRİPTO</button>
         </div>
       <Graphcontent type={type}/>
+
+      
       </>
       
     )

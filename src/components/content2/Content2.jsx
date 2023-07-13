@@ -9,18 +9,18 @@ import gif3 from '../../../public/dollar-donation.gif';
 const navigation = [
   {
     gorsel:gif1,
-    title: "FOREX",
-    description: "FOREX This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+    title: "Güler Yüzlü Hizmet"
+    // description: "FOREX This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
   },
   {
     gorsel:gif2,
-    title: "OPSİYON",
-    description: "OPSİYON This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+    title: "ARAŞTIRMA & ANALİZ",
+    // description: "OPSİYON This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
   },
   {
     gorsel:gif3,
-    title: "VİOP",
-    description: "VİOP This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+    title: "Kazançlı Müşteri Portföyü",
+    // description: "VİOP This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
   }
 ];
 
@@ -29,8 +29,8 @@ const Content2 = (props) => {
   
   return (
     <Container className='bg-orange my-4 py-4' fluid>
-      <Container>
-      <Row xs={1} md={2} lg={4} className="g-4">
+      <Container py-4>
+      <Row xs={1} md={2} lg={4} className="g-4 py-4" >
         
       {navigation.map((navi, index) => (
         <Col xs={12} md={4} lg={4} key={index}>
