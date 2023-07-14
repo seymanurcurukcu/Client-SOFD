@@ -30,7 +30,7 @@ const Home = () => {
 
       <Container className='my-4'>
 
-        <Graphcontent/>
+        <ViopMessage/>
       </Container>
       <div className='py-4'></div>
       {/* <Content5/>
