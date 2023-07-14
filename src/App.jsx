@@ -13,13 +13,12 @@ import Opsiyon from './pages/opsiyon/Opsiyon';
 
 
 
-
-
 function App() {
 
   return (
    
     <div>
+
       <Header/>
       <Router>
         <Routes>
@@ -33,7 +32,7 @@ function App() {
         </Routes>
       </Router>
       <Footer />
-     
+    
     </div>      
     
   )

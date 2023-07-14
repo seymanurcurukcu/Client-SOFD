@@ -6,7 +6,7 @@ import ChartsButtons from '../../components/graphcontent/ChartsButtons';
 import { Container } from 'react-bootstrap';
 import Content4 from '../../components/content4/Content4';
 import Graphcontent from '../../components/graphcontent/Graphcontent';
-
+import ViopMessage from '../../components/graphcontent/viop';
 const Home = () => {
  
   return (
@@ -21,8 +21,8 @@ const Home = () => {
       <div className='py-4'></div>
 
       <Container className='my-4'>
-
-        <Graphcontent/>
+      <ViopMessage/>
+        {/* <Graphcontent/> */}
       </Container>
       <div className='py-4'></div>
 
