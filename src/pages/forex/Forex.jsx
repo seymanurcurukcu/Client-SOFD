@@ -3,7 +3,7 @@ import image from '../../assets/img/hakkimizdafoto.png';
 import { Row, Col, Container, Image } from 'react-bootstrap';
 import ChartsButtons from '../../components/graphcontent/ChartsButtons';
 import YouTube from 'react-youtube';
-
+import Websocket from '../../components/graphcontent/websocket';
 const Forex = () => {
 
   const opts = {
@@ -53,7 +53,7 @@ const Forex = () => {
       </Row>
      
       <Row>
-        <ChartsButtons></ChartsButtons>
+        <Websocket/>
       </Row>
       <Row>
 

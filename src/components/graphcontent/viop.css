@@ -113,6 +113,17 @@
   .item-p{
     color: rgb(233, 252, 252);
   }
+.doviz-buttons{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 3rem;
+    text-align: center;
+  }
+  .spot-list{
+   justify-content: center;
+    text-align: center;
+  
+  }
 
   
   

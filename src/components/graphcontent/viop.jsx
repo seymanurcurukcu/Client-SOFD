@@ -26,7 +26,6 @@ const ViopMessage = () => {
     'HALKB': { buyPrices: [], sellPrices: [] },
     'YKBNK': { buyPrices: [], sellPrices: [] },
     'AKBNK': { buyPrices: [], sellPrices: [] },
-
   });
   const [selectedCurrency, setSelectedCurrency] = useState('SASA');
   const [chart, setChart] = useState(null);
@@ -47,7 +46,6 @@ const ViopMessage = () => {
       ws.send(WS_HALKB_MESSAGE);
       ws.send(WS_YKBNK_MESSAGE);
       ws.send(WS_AKBNK_MESSAGE);
-
     };
 
     ws.onmessage = (event) => {
@@ -60,18 +58,21 @@ const ViopMessage = () => {
 
         if (sellPrice !== '' && buyPrice !== '') {
           setSpotPariteler((prevSpotPariteler) => {
-            const prevBuyPrice = prevSpotPariteler[name].buyPrices[prevSpotPariteler[name].buyPrices.length - 1];
-            const prevSellPrice = prevSpotPariteler[name].sellPrices[prevSpotPariteler[name].sellPrices.length - 1];
+            const prevBuyPrices = prevSpotPariteler[name].buyPrices;
+            const prevSellPrices = prevSpotPariteler[name].sellPrices;
 
             const updatedSpotPariteler = {
               ...prevSpotPariteler,
               [name]: {
-                buyPrices: [...prevSpotPariteler[name].buyPrices, parseFloat(buyPrice)],
-                sellPrices: [...prevSpotPariteler[name].sellPrices, parseFloat(sellPrice)],
+                buyPrices: [...prevBuyPrices.slice(-4), parseFloat(buyPrice)],
+                sellPrices: [...prevSellPrices.slice(-4), parseFloat(sellPrice)],
               },
             };
 
-            if (parseFloat(buyPrice) > prevBuyPrice || parseFloat(sellPrice) > prevSellPrice) {
+            if (
+              (prevBuyPrices.length > 0 && parseFloat(buyPrice) > prevBuyPrices[prevBuyPrices.length - 1]) ||
+              (prevSellPrices.length > 0 && parseFloat(sellPrice) > prevSellPrices[prevSellPrices.length - 1])
+            ) {
               setPriceChange(true);
               setTimeout(() => setPriceChange(false), 500);
             }
@@ -92,7 +93,6 @@ const ViopMessage = () => {
   const handleCurrencyClick = (currency) => {
     setSelectedCurrency(currency);
   };
-
   const getPriceChangeIndicator = (prices, direction) => {
     if (prices.length < 2) {
       return null;
@@ -124,7 +124,7 @@ const ViopMessage = () => {
 
       const options = {
         chart: {
-          type: 'line',
+          type: 'area',
           height: 390,
         },
         series: chartData.series,
@@ -144,19 +144,19 @@ const ViopMessage = () => {
             fontWeight: 'bold',
           },
         },
+        colors: ['#2ecc71', '#e74c3c'], // Alış yeşil, Satış kırmızı renkte
       };
 
       if (chart) {
         chart.updateSeries(chartData.series);
         chart.updateOptions(options);
-      } 
-      else {
+      } else {
         const chartElement = document.getElementById('chart');
 
         if (chartElement) {
           const newChart = new ApexCharts(chartElement, options);
-          setChart(newChart);
           newChart.render();
+          setChart(newChart);
         }
       }
     }
@@ -178,7 +178,7 @@ const ViopMessage = () => {
 
   return (
     <div>
-      <div>
+      <div className='doviz-buttons'>
         <Button onClick={() => handleCurrencyClick('SASA')} className='title-doviz'>SASA</Button>
         {' '}       
         <Button onClick={() => handleCurrencyClick('KOZAL')} className='title-doviz'>KOZAL</Button>
