@@ -13,16 +13,16 @@ const Footer = () => {
         <Container className='text-center text-md-start mt-5'>
           <Row className='mt-3'>
             <Col md="3" lg="4" xl="3" className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4 text-start'>
+              <h6 className=' fw-bold mb-4 text-start'>
                 Sedat Ocakcı Danışmanlık Şirketi
               </h6>
               <p>
-              Başarılı girişimler, cesur adımlarla toplumumuza ve ortak geleceğimize değer katmak,markalarımızla daima yeniliklere öncülük etmektedir.
+              Başarılı girişimler, cesur adımlarla toplumumuza ve ortak geleceğimize değer katmak, markalarımızla daima yeniliklere öncülük etmektedir.
               </p>
             </Col>
 
             <Col md="2" lg="2" xl="2" className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4 text-start'>Ürünlerimiz</h6>
+              <h6 className=' fw-bold mb-4 text-start'>Ürünlerimiz</h6>
               <p>
                 <a href='#!' className='text-reset'>
                   Hira Yazılım
@@ -45,8 +45,8 @@ const Footer = () => {
               </p>
             </Col>
 
-            {/* <Col md="3" lg="2" xl="2" className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4 text-start'>Önemli Bağlantılar</h6>
+            <Col md="3" lg="2" xl="2" className='mx-auto mb-4'>
+              <h6 className=' fw-bold mb-4 text-start'>Önemli Bağlantılar</h6>
               <p>
                 <a href='#!' className='text-reset'>
                   Haberler
@@ -77,10 +77,10 @@ const Footer = () => {
                   Borsa
                 </a>
               </p>
-            </Col> */}
+            </Col>
 
             <Col md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4 text-start'>İletişim</h6>
+              <h6 className=' fw-bold mb-4 text-start'>İletişim</h6>
               <p>
                 
               AOSB Mah. 10049 Sk. No:6 <br />Çiğli/İzmir

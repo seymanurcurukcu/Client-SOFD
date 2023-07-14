@@ -9,7 +9,7 @@ import gif3 from '../../../public/dollar-donation.gif';
 const navigation = [
   {
     gorsel:gif1,
-    title: "Güler Yüzlü Hizmet"
+    title: "GÜLER YÜZLÜ HİZMET"
     // description: "FOREX This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
   },
   {
@@ -19,7 +19,7 @@ const navigation = [
   },
   {
     gorsel:gif3,
-    title: "Kazançlı Müşteri Portföyü",
+    title: "KAZANÇLI PORTFÖY",
     // description: "VİOP This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
   }
 ];
@@ -34,13 +34,13 @@ const Content2 = (props) => {
         
       {navigation.map((navi, index) => (
         <Col xs={12} md={4} lg={4} key={index}>
-          <Card className='text-center'>
-            <Card.Body>
-              <Card.Title>
-                <img src={navi.gorsel} alt="" width={64}/> {navi.title}</Card.Title>
-              <Card.Text>
-                {navi.description}
-              </Card.Text>
+          <Card className='text-center '>
+            <Card.Body className='gif-card-body'>
+              
+                <img src={navi.gorsel} alt="" width={64}/> {navi.title}
+              
+                <p>{navi.description}</p>
+            
             </Card.Body>
           </Card>
         </Col>  

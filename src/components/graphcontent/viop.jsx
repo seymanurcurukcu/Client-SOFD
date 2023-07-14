@@ -149,7 +149,8 @@ const ViopMessage = () => {
       if (chart) {
         chart.updateSeries(chartData.series);
         chart.updateOptions(options);
-      } else {
+      } 
+      else {
         const chartElement = document.getElementById('chart');
 
         if (chartElement) {

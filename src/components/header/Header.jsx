@@ -23,23 +23,27 @@ const Header = () => {
                 className="d-inline-block align-top me-2 logo"
               />
               <div>
-              <h6 className='m-0'>SEDAT OCAKCI <br /> DANIŞMANLIK HİZMETLERİ</h6>
+              <h6 className='m-0 sodh-text-type'>SEDAT OCAKCI <br /> DANIŞMANLIK  HİZMETLERİ</h6>
              </div>
             </Navbar.Brand>
           </div>
 
-          <div className='d-flex gap-3' >
+          <div className='d-flex gap-3 ' >
             
             <Nav className="ms-auto" >
-            <Nav.Link href="#">7/24 BİZE ULAŞIN</Nav.Link>
+            <Nav.Link href="" className='lg-d-none'>7/24 BİZE ULAŞIN</Nav.Link>
+            <Nav.Link href="" className='sm-d-none'><i class="bi bi-chat-text"></i></Nav.Link>
             <div className="vr" />
 
-            <Nav.Link href="#"> +90 534 787 02 65</Nav.Link>
+            <Nav.Link href="" className='lg-d-none'> +90 534 787 02 65</Nav.Link>
+            <Nav.Link href="" className='sm-d-none'> <i class="bi bi-telephone"></i></Nav.Link>
             <div className="vr" />
 
-            <Nav.Link href="#">CANLI DESTEK</Nav.Link>
+            <Nav.Link href="" className='lg-d-none'>CANLI DESTEK</Nav.Link>
+            <Nav.Link href="" className='sm-d-none'><i class="bi bi-people"></i></Nav.Link>
           </Nav>
           </div>
+          
         </Container>
       </Navbar>
       <Container>

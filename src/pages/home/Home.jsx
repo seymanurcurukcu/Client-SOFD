@@ -7,6 +7,9 @@ import { Container } from 'react-bootstrap';
 import Content4 from '../../components/content4/Content4';
 import Graphcontent from '../../components/graphcontent/Graphcontent';
 import ViopMessage from '../../components/graphcontent/viop';
+
+import Content5 from '../../components/content5/Content5';
+
 const Home = () => {
  
   return (
@@ -14,7 +17,10 @@ const Home = () => {
       <div className='mb-4'>
         <Content1 />
       </div>
-      <div className='py-4'></div>
+      <div className='py-4'></div>   
+      <div className='my-4'>
+        <Content3 />
+      </div>
       <div className='my-4'>
         <Content2 />
       </div>
@@ -25,10 +31,10 @@ const Home = () => {
         {/* <Graphcontent/> */}
       </Container>
       <div className='py-4'></div>
+      {/* <Content5/>
+      <div className='py-4'></div>
 
-      <div className='my-4'>
-        <Content3 />
-      </div>
+    */}
       <div className='my-4'>
         <Content4 />
       </div>
