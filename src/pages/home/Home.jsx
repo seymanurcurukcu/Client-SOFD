@@ -6,6 +6,8 @@ import ChartsButtons from '../../components/graphcontent/ChartsButtons';
 import { Container, Row, Col } from 'react-bootstrap';
 import Content4 from '../../components/content4/Content4';
 import Graphcontent from '../../components/graphcontent/Graphcontent';
+import ViopMessage from '../../components/graphcontent/viop';
+
 import Content5 from '../../components/content5/Content5';
 import Feeds from '../../components/Feed/Feeds';
 import ProjectTables from '../../components/ProjectTable/ProjectTable'
@@ -28,7 +30,7 @@ const Home = () => {
 
       <Container className='my-4'>
 
-        <Graphcontent />
+        <Graphcontent/>
       </Container>
       <div className='py-4'></div>
       {/* <Content5/>

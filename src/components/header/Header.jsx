@@ -32,15 +32,15 @@ const Header = () => {
             
             <Nav className="ms-auto" >
             <Nav.Link href="" className='lg-d-none'>7/24 BİZE ULAŞIN</Nav.Link>
-            <Nav.Link href="" className='sm-d-none'><i class="bi bi-chat-text"></i></Nav.Link>
+            <Nav.Link href="" className='sm-d-none'><i className="bi bi-chat-text"></i></Nav.Link>
             <div className="vr" />
 
             <Nav.Link href="" className='lg-d-none'> +90 534 787 02 65</Nav.Link>
-            <Nav.Link href="" className='sm-d-none'> <i class="bi bi-telephone"></i></Nav.Link>
+            <Nav.Link href="" className='sm-d-none'> <i className="bi bi-telephone"></i></Nav.Link>
             <div className="vr" />
 
             <Nav.Link href="" className='lg-d-none'>CANLI DESTEK</Nav.Link>
-            <Nav.Link href="" className='sm-d-none'><i class="bi bi-people"></i></Nav.Link>
+            <Nav.Link href="" className='sm-d-none'><i className="bi bi-people"></i></Nav.Link>
           </Nav>
           </div>
           

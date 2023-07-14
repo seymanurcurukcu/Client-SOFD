@@ -1,6 +1,7 @@
 import React from 'react'
 import image from '../../assets/img/hakkimizdafoto.png';
 import { Row, Col, Container, Image } from 'react-bootstrap';
+import HisseSenedi from '../../components/graphcontent/hisse-senedi';
 const Borsa = () => {
   return (
     <Container className='py-4'>
@@ -29,6 +30,9 @@ Borsalar, yatırımcılara uzun vadeli yatırım fırsatları, şirketlere serma
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             ></iframe>
       </Col>
+    </Row>
+    <Row>
+      <HisseSenedi/>
     </Row>
   </Container>
   )
