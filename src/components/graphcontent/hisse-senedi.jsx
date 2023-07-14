@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Card, CardBody, CardSubtitle, CardTitle } from 'reactstrap';
+import { Button,Card, CardBody, CardSubtitle, CardTitle } from 'reactstrap';
 import ApexCharts from 'apexcharts';
 
 const HisseSenedi = () => {
@@ -13,7 +13,7 @@ const HisseSenedi = () => {
     'XU050': { buyPrices: [], sellPrices: [] },
     'XU030': { buyPrices: [], sellPrices: [] },
   });
-  const [selectedCurrency, setSelectedCurrency] = useState(null);
+  const [selectedCurrency, setSelectedCurrency] = useState('XU100');
   const [chart, setChart] = useState(null);
   const [priceChange, setPriceChange] = useState(false);
 
@@ -173,21 +173,53 @@ const HisseSenedi = () => {
 
   return (
     <div>
-      <h1>Hisse Senedi</h1>
+       <div className='doviz-buttons'>
+        <Button onClick={() => handleCurrencyClick('XU100')} className='title-doviz'>BIST100</Button>
+        {' '}       
+        <Button onClick={() => handleCurrencyClick('XU050')} className='title-doviz'>BIST50</Button>
+        {'     '}
+        <Button onClick={() => handleCurrencyClick('XU030')} className='title-doviz'>BIST30</Button>
+        {'     '}
+       
+      </div>
 
-      <div className="buttons">
+      {/* <div className="buttons">
         <button onClick={() => handleCurrencyClick('XU100')}>BIST100</button>
         <button onClick={() => handleCurrencyClick('XU050')}>BIST50</button>
         <button onClick={() => handleCurrencyClick('XU030')}>BIST30</button>
-      </div>
+      </div> */}
 
       <div className="spot-list">
         {Object.entries(spotPariteler).map(([name, item]) => (
           <div className="item" key={name}>
             <p>{getBISTCode(name)}</p>
             <p>
-            
-               Değer: <span className={`sell-price ${priceChange ? 'price-change' : ''}`}>{item.sellPrices[item.sellPrices.length - 1]}</span>
+            Değer: 
+               {/* Değer: <span className={`sell-price ${priceChange ? 'price-change' : ''}`}>{item.sellPrices[item.sellPrices.length - 1]}</span> */}
+               {" "}
+      <span
+        className={`sell-price ${
+          priceChange ? "price-change" : ""
+        } ${
+          item.sellPrices.length > 1 &&
+          item.sellPrices[item.sellPrices.length - 1] >
+            item.sellPrices[item.sellPrices.length - 2]
+            ? "price-increase"
+            : "price-decrease"
+        }`}
+      >
+        {item.sellPrices[item.sellPrices.length - 1]}
+        {item.sellPrices.length > 1 &&
+          item.sellPrices[item.sellPrices.length - 1] >
+            item.sellPrices[item.sellPrices.length - 2] && (
+            <i className="bi bi-arrow-up-short"></i>
+          )}
+        {item.sellPrices.length > 1 &&
+          item.sellPrices[item.sellPrices.length - 1] <
+            item.sellPrices[item.sellPrices.length - 2] && (
+            <i className="bi bi-arrow-down-short"></i>
+          )}
+      </span>
             </p>
           </div>
         ))}

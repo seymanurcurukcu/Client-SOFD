@@ -1,6 +1,7 @@
 import React from 'react'
 import image from '../../assets/img/hakkimizdafoto.png';
 import { Row, Col, Container, Image } from 'react-bootstrap';
+import ViopMessage from '../../components/graphcontent/viop';
 const Viop = () => {
   return (
     <Container className='py-4'>
@@ -31,6 +32,9 @@ VİOP, yatırımcılar için farklı stratejilerin uygulanabileceği bir piyasa 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             ></iframe>
       </Col>
+    </Row>
+    <Row>
+    <ViopMessage/>
     </Row>
   </Container>
   )

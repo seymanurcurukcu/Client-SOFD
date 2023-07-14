@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Card, CardBody, CardSubtitle, CardTitle } from 'reactstrap';
 import ApexCharts from 'apexcharts';
-
+import { Button, ButtonGroup, Card, CardBody, CardSubtitle, CardTitle } from 'reactstrap';
 const WebSocketExample = () => {
   const WS_ADDRESS = 'wss://socket.paratic.com/v2/?EIO=4&transport=websocket';
   const WS_USD_TRY_MESSAGE = '42["joinStream", {"codes": ["USD/TRL"]}]';
@@ -15,7 +14,7 @@ const WebSocketExample = () => {
     'RUB/TRL': { buyPrices: [], sellPrices: [] },
     'CAD/TRL': { buyPrices: [], sellPrices: [] },
   });
-  const [selectedCurrency, setSelectedCurrency] = useState(null);
+  const [selectedCurrency, setSelectedCurrency] = useState('USD/TRL');
   const [chart, setChart] = useState(null);
   const [priceChange, setPriceChange] = useState(false);
 
@@ -104,7 +103,7 @@ const WebSocketExample = () => {
 
       const options = {
         chart: {
-          type: 'line',
+          type: 'area',
           height: 390,
         },
         series: chartData.series,
@@ -124,8 +123,8 @@ const WebSocketExample = () => {
             fontWeight: 'bold',
           },
         },
+        colors: ['#2ecc71', '#e74c3c'], // Alış yeşil, Satış kırmızı renkte
       };
-
       if (chart) {
         chart.updateSeries(chartData.series);
         chart.updateOptions(options);
@@ -156,17 +155,23 @@ const WebSocketExample = () => {
   }, [selectedCurrency]);
 
   return (
-    <div>
-      <h1>Spot Pariteler</h1>
+    <div style={{marginTop:"60px"}} >
 
-      <div className="buttons">
-        <button onClick={() => handleCurrencyClick('USD/TRL')}>USD/TRL</button>
-        <button onClick={() => handleCurrencyClick('EUR/TRL')}>EUR/TRL</button>
-        <button onClick={() => handleCurrencyClick('RUB/TRL')}>RUB/TRL</button>
-        <button onClick={() => handleCurrencyClick('CAD/TRL')}>CAD/TRL</button>
+<div className='doviz-buttons'>
+        <Button onClick={() => handleCurrencyClick('USD/TRL')} className='title-doviz'>USD/TRL</Button>
+        {' '}       
+        <Button onClick={() => handleCurrencyClick('EUR/TRL')} className='title-doviz'>EUR/TRL</Button>
+        {'     '}
+        <Button oonClick={() => handleCurrencyClick('RUB/TRL')} className='title-doviz'>RUB/TRL</Button>
+        {'     '}
+        <Button onClick={() => handleCurrencyClick('CAD/TRL')}className='title-doviz'>CAD/TRL</Button>
+        {'     '}
+
+      
+
       </div>
 
-      <div className="spot-list">
+      {/* <div className="spot-list">
         {Object.entries(spotPariteler).map(([name, item]) => (
           <div className="item" key={name}>
             <p>{name}</p>
@@ -176,8 +181,66 @@ const WebSocketExample = () => {
             </p>
           </div>
         ))}
-      </div>
+      </div> */}
+   <div className="spot-list">
+      {Object.entries(spotPariteler).map(([name, item]) => (
+  <div className="item" key={name}>
+    <p className='item-p'>{name}</p>
+    <p>
+      Alış:{" "}
+      <span
+        className={`buy-price ${
+          priceChange ? "price-change" : ""
+        } ${
+          item.buyPrices.length > 1 &&
+          item.buyPrices[item.buyPrices.length - 1] >
+            item.buyPrices[item.buyPrices.length - 2]
+            ? "price-increase"
+            : "price-decrease"
+        }`}
+      >
+        {item.buyPrices[item.buyPrices.length - 1]}
+        {item.buyPrices.length > 1 &&
+          item.buyPrices[item.buyPrices.length - 1] >
+            item.buyPrices[item.buyPrices.length - 2] && (
+            <i className="bi bi-arrow-up-short"></i>
+          )}
+        {item.buyPrices.length > 1 &&
+          item.buyPrices[item.buyPrices.length - 1] <
+            item.buyPrices[item.buyPrices.length - 2] && (
+            <i className="bi bi-arrow-down-short"></i>
+          )}
+      </span>{" "}
+      <br />
+      Satış:{" "}
+      <span
+        className={`sell-price ${
+          priceChange ? "price-change" : ""
+        } ${
+          item.sellPrices.length > 1 &&
+          item.sellPrices[item.sellPrices.length - 1] >
+            item.sellPrices[item.sellPrices.length - 2]
+            ? "price-increase"
+            : "price-decrease"
+        }`}
+      >
+        {item.sellPrices[item.sellPrices.length - 1]}
+        {item.sellPrices.length > 1 &&
+          item.sellPrices[item.sellPrices.length - 1] >
+            item.sellPrices[item.sellPrices.length - 2] && (
+            <i className="bi bi-arrow-up-short"></i>
+          )}
+        {item.sellPrices.length > 1 &&
+          item.sellPrices[item.sellPrices.length - 1] <
+            item.sellPrices[item.sellPrices.length - 2] && (
+            <i className="bi bi-arrow-down-short"></i>
+          )}
+      </span>
+    </p>
+  </div>
+))}
 
+</div>
       <div className="container_charts">
         {selectedCurrency && (
           <Card>
