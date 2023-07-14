@@ -68,3 +68,15 @@ padding: 10px;
 .m-xl{
   margin-bottom: 5rem;
 }
+
+@media (min-width: 0px) and (max-width:992px) {
+  .lg-d-none{
+    display: none !important
+  }
+}
+
+@media (min-width: 992px) {
+  .sm-d-none{
+    display: none !important
+  }
+}
