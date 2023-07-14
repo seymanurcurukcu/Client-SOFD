@@ -69,12 +69,27 @@ padding: 10px;
   margin-bottom: 5rem;
 }
 
+/* 
+     SMALL and MEDIUM SIZE
+*/
 @media (min-width: 0px) and (max-width:992px) {
   .lg-d-none{
     display: none !important
   }
+  .nav-link{
+    padding: 8px !important;
+  }
+  .text-type {
+    margin: 0;
+    font-size: 14px}
+    .sodh-text-type{
+      font-size: small;
+    }
 }
 
+/* 
+     LG SIZE and MORE
+*/
 @media (min-width: 992px) {
   .sm-d-none{
     display: none !important

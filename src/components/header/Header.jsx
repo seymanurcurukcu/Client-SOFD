@@ -23,7 +23,7 @@ const Header = () => {
                 className="d-inline-block align-top me-2 logo"
               />
               <div>
-              <h6 className='m-0'>SEDAT OCAKCI <br /> DANIŞMANLIK <br className='sm-d-none' /> HİZMETLERİ</h6>
+              <h6 className='m-0 sodh-text-type'>SEDAT OCAKCI <br /> DANIŞMANLIK  HİZMETLERİ</h6>
              </div>
             </Navbar.Brand>
           </div>

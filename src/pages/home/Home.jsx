@@ -29,10 +29,10 @@ const Home = () => {
         <Graphcontent/>
       </Container>
       <div className='py-4'></div>
-      <Content5/>
+      {/* <Content5/>
       <div className='py-4'></div>
 
-   
+    */}
       <div className='my-4'>
         <Content4 />
       </div>

@@ -6,9 +6,9 @@ import pic2 from '../../../public/FinansalPlanlamaOdakli_5983fe.jpg'
 const Content4 = () => {
     return (
         <Container className='d-flex justify-content-center '>
-            <Row className='justify-content-center py-4'>
-                <Col>
-                    <Card className="text-center"  style={{ width: '18rem' }}>                        
+            <Row className='justify-content-center py-4 mx-auto gap-2'>
+{/*                 <Col className='m-auto'>
+ */}                    <Card className="text-center mx-auto"  style={{ width: '18rem' }}>                        
                         <Card.Body>
                                                         
                             <Card.Img src={pic1}></Card.Img>
@@ -19,9 +19,9 @@ const Content4 = () => {
                         </Card.Body>
                         <Card.Footer className="text-muted">28 Şubat 2023</Card.Footer>
                     </Card>
-                </Col>
-                <Col>
-                    <Card className="text-center"  style={{ width: '18rem' }}>                        
+                
+{/*                 <Col className='m-auto'>
+ */}                    <Card className="text-center mx-auto"  style={{ width: '18rem' }}>                        
                         <Card.Body>
                                                         
                             <Card.Img src={pic1}></Card.Img>
@@ -32,9 +32,9 @@ const Content4 = () => {
                         </Card.Body>
                         <Card.Footer className="text-muted">28 Şubat 2023</Card.Footer>
                     </Card>
-                </Col>
-                <Col>
-                    <Card className="text-center"  style={{ width: '18rem' }}>                        
+                
+{/*                 <Col className='m-auto'>
+ */}                    <Card className="text-center mx-auto "  style={{ width: '18rem' }}>                        
                         <Card.Body>
                                                         
                             <Card.Img src={pic1}></Card.Img>
@@ -45,7 +45,7 @@ const Content4 = () => {
                         </Card.Body>
                         <Card.Footer className="text-muted">28 Şubat 2023</Card.Footer>
                     </Card>
-                </Col>
+                
             </Row>
             
         </Container>

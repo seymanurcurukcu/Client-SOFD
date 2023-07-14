@@ -34,13 +34,13 @@ const Content2 = (props) => {
         
       {navigation.map((navi, index) => (
         <Col xs={12} md={4} lg={4} key={index}>
-          <Card className='text-center'>
-            <Card.Body>
-              <Card.Title>
-                <img src={navi.gorsel} alt="" width={64}/> {navi.title}</Card.Title>
-              <Card.Text className='f'>
+          <Card className='text-center '>
+            <Card.Body className='gif-card-body'>
+              
+                <img src={navi.gorsel} alt="" width={64}/> {navi.title}
+              
                 <p>{navi.description}</p>
-              </Card.Text>
+            
             </Card.Body>
           </Card>
         </Col>  
