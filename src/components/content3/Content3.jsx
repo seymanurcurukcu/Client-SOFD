@@ -5,7 +5,7 @@ import gif from '../../../public/logo2.gif'
 
 const Content3 = () => {
   return (
-    <Container className='bg-gray my-4 py-4' fluid>
+    <Container className=' my-4 py-4' fluid>
       <Container>
       <Row className='align-items-center ' >
         <Col lg={8} sm={12} className='d-flex flex-column align-items-center justify-content-center'>

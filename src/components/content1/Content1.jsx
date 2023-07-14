@@ -16,6 +16,7 @@ const Content1 = () => {
                         className="d-block w-100"
                         src={pic1}
                         alt="First slide"
+                        
                     />
                     {/* <Carousel.Caption>
                         <h3>First slide label</h3>
